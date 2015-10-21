@@ -33,7 +33,22 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script>
+function initMap() {
+var myLatLng = {lat: 52.4816433, lng: -0.4681957};
 
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 17,
+  center: myLatLng
+});
+
+var marker = new google.maps.Marker({
+  position: myLatLng,
+  map: map,
+  title: 'Hello World!'
+});
+}
+</script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -112,7 +127,7 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Where I work</h2>
-                    <p>Oundle School is a Independant boarding school in Northamptonshire</p>
+                    <p>Oundle School is a Independent boarding school in Northamptonshire</p>
                     <a href="http://www.oundleschool.org.uk/Computing" class="btn btn-default btn-lg">Find out more here</a>
                 </div>
             </div>
@@ -162,7 +177,7 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsluEXfnY7gpt_QrfXSpnuzVK-77Ab0_A&callback=initMap"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
